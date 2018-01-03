@@ -1,6 +1,12 @@
 #container{
 	margin: 0 auto;
-	background-color: grey;
+	/*this may cause a merge error*/
+	border: 2px solid grey; 
 	width: 360px;
 
+}
+
+.completedTodo{
+	color: grey;
+	text-decoration: line-through;
 }
