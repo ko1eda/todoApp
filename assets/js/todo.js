@@ -35,7 +35,8 @@ $("input[type =\"text\"]").keypress(function(event) {
 			var inputText = $(this).val();
 			$(this).val("");
 			//add item to todo list
-			$("ul").append("<li><span class=\"delete\">X </span>" +inputText+ "</li>");
+			$("ul").append("<li><span class=\"delete\"> <i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i>"+
+							"</span> " +inputText+ "</li>");
 		}
 });
 

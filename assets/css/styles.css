@@ -1,8 +1,17 @@
+body{
+/*background: #304352; 
+background: -webkit-linear-gradient(to right, #d7d2cc, #304352); 
+background: linear-gradient(to right, #d7d2cc, #304352); */
+background: #FFA17F;
+background: -webkit-linear-gradient(to right, #00223E, #FFA17F); 
+background: linear-gradient(to right, #00223E, #FFA17F); 
+}
+
 #container{
 	margin: 10% auto;
 	background-color: #f7f7f7;
 	width: 360px;
-	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 3px rgba(0, 0, 3, 0.2);
 	font-family:'Roboto', sans-serif;
 
 }
@@ -16,6 +25,11 @@ h1{
 	font-size: 24px;
 	font-weight: 400;
 }
+/*move penicil icon to right*/
+.fa-pencil-square-o{
+	margin-left: 50%;
+}
+
 
 /*remove the default ul style and spacing*/
 ul{
@@ -26,12 +40,11 @@ ul{
 
 li{
 	height: 40px;
-	/*padding: 10px 0 0 10px;*/
 	line-height: 40px;
 	color: #666;
 }
 
-/*psuedo class slector works on every nth element amoung li children*/
+/*psuedo class slector works on every odd or even element amoung li children*/
 li:nth-child(odd){
 	background-color: white;
 }
@@ -42,8 +55,12 @@ input[type="text"]{
 	padding: 13px 13px 13px 20px;
 	/*this makes it so the border and padding of the box doesn't cause it to overflow out of the parent container*/
 	box-sizing: border-box;
+	/*cross-browser support incase*/
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	/*removes ugly default border styling*/
 	border: none; 
+	
 	background-color: #f7f7f7;
 	color: #2980b9;
 }
@@ -55,7 +72,6 @@ input[type="text"]:focus{
 	/*gets rid of the little browser default style outline around the box*/
 	outline: none;
 }
-
 
 
 /*jQuery class toggles*/
