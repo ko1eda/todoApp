@@ -1,6 +1,3 @@
-var debug = true;
-
-
 /**
 * Adds click listener to each li list element.
 * Toggles .completedTodo class on and off
@@ -8,6 +5,7 @@ var debug = true;
 $("ul").on("click","li",function(){
 	$(this).toggleClass("completedTodo");
 });
+
 
 /**
 * Adds click listner to the UL container, second argument specifies 
@@ -18,7 +16,7 @@ $("ul").on("click","li",function(){
 */
 $("ul").on("click",".delete",function (event) {
 	event.stopPropagation();
-	$(this).parent().fadeOut(500,function(){
+	$(this).parent().fadeOut(400,function(){
 		$(this).remove(); //$(this) is referring to the li element, not the span b/c the li is the parent element
 	});
 });
@@ -40,6 +38,14 @@ $("input[type =\"text\"]").keypress(function(event) {
 		}
 });
 
+
+/**
+* Selects pencil icom and adds .on("click") listener.
+*	Selects the text input and toggles its display: none with a slide effect.
+*/
+$(".fa-pencil-square-o").on("click",function(){
+	$("input[type=\"text\"]").slideToggle(150);
+});
 
 
 

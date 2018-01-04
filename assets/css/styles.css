@@ -25,11 +25,11 @@ h1{
 	font-size: 24px;
 	font-weight: 400;
 }
+
 /*move penicil icon to right*/
 .fa-pencil-square-o{
-	margin-left: 50%;
+	margin-left: 52%;
 }
-
 
 /*remove the default ul style and spacing*/
 ul{
@@ -49,6 +49,29 @@ li:nth-child(odd){
 	background-color: white;
 }
 
+.delete{
+	background-color: #e74c3c;
+	margin-right: 20px;
+	text-align: center;
+	color: white;
+	/*40 pixles is the height of each li*/
+	height: 40px;
+	/*width starts at zero so it can transition to 40 on hover*/
+	width: 0;
+	/*this gives the icon block properties so that it fills the specified width and height inline*/
+	display: inline-block;
+	/*this gets rid of weird glicth where icon is still showing after fadeout*/
+	opacity: 0;
+	transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.07s;
+}
+
+li:hover .delete{
+	width: 40px;
+	opacity: 1;
+}
+
 input[type="text"]{
 	font-size: 18px;
 	width: 100%;
@@ -58,9 +81,8 @@ input[type="text"]{
 	/*cross-browser support incase*/
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	/*removes ugly default border styling*/
-	border: none; 
-	
+	/*gives it a small invisible border so it doesn't move when focus border is added bc they're the same*/
+	border: 3px solid rgba(0,0,0,0);
 	background-color: #f7f7f7;
 	color: #2980b9;
 }
@@ -73,8 +95,8 @@ input[type="text"]:focus{
 	outline: none;
 }
 
-
 /*jQuery class toggles*/
+
 .completedTodo{
 	color: grey;
 	text-decoration: line-through;
