@@ -1,11 +1,64 @@
 #container{
-	margin: 0 auto;
-	/*this may cause a merge error*/
-	border: 2px solid grey; 
+	margin: 10% auto;
+	background-color: #f7f7f7;
 	width: 360px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	font-family:'Roboto', sans-serif;
 
 }
 
+h1{
+	background-color: #2980b9;
+	color: white;
+	margin: 0;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: 400;
+}
+
+/*remove the default ul style and spacing*/
+ul{
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+
+li{
+	height: 40px;
+	/*padding: 10px 0 0 10px;*/
+	line-height: 40px;
+	color: #666;
+}
+
+/*psuedo class slector works on every nth element amoung li children*/
+li:nth-child(odd){
+	background-color: white;
+}
+
+input[type="text"]{
+	font-size: 18px;
+	width: 100%;
+	padding: 13px 13px 13px 20px;
+	/*this makes it so the border and padding of the box doesn't cause it to overflow out of the parent container*/
+	box-sizing: border-box;
+	/*removes ugly default border styling*/
+	border: none; 
+	background-color: #f7f7f7;
+	color: #2980b9;
+}
+
+/*This will only be called when the text input is selected*/
+input[type="text"]:focus{
+	background-color: white;
+	border: 3px solid #2980b9;
+	/*gets rid of the little browser default style outline around the box*/
+	outline: none;
+}
+
+
+
+/*jQuery class toggles*/
 .completedTodo{
 	color: grey;
 	text-decoration: line-through;

@@ -26,7 +26,7 @@ $("ul").on("click",".delete",function (event) {
 
 /**
 * Selects the text input and adds a keypress listener specifically for enter key.
-*	If Enter: get the text value of input, store it and clear the text value.
+*	If Enter: get the text value of input, store it and clear the input value.
 *	Append the newly entered text to the UL list as an li, add in span class tag for delete.
 */
 $("input[type =\"text\"]").keypress(function(event) {
